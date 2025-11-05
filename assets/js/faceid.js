@@ -42,7 +42,7 @@ async function loadLabeledImages() {
 
 async function startVideo() {
   try {
-    const stream = await navigator.mediaDevices.getUserMedia({ video: {} });
+    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
     video.srcObject = stream;
     video.style.display = 'block';
     await video.play();
