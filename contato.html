@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato - HelpTech Antunes</title>
+  <meta name="description" content="Fale com a HelpTech Antunes: orçamento, suporte técnico e atendimento rápido por WhatsApp. Endereço em Jundiaí/SP." />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="icon" href="logo-helptech.png" type="image/png">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contato - HelpTech Antunes" />
+  <meta property="og:description" content="Solicite orçamento e fale com a equipe pelo WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo-helptech.png" />
+  
+  <!-- Bootstrap + Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --brand: #198754;
+      --brand-2: #157347;
+    }
+
+    body { background-color: #f8f9fa; }
+
+    .hero-contato {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: white;
+      padding: 72px 20px;
+      text-align: center;
+    }
+
+    .hero-contato h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; }
+    .hero-contato p { opacity: .95; }
+
+    .form-container, .info-box {
+      background: #fff;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 8px 28px rgba(0,0,0,.08);
+    }
+
+    .form-label i { margin-right: 6px; color: var(--brand); }
+
+    .form-control:focus, .form-select:focus {
+      border-color: var(--brand);
+      box-shadow: 0 0 0 .2rem rgba(25, 135, 84, .25);
+    }
+
+    footer { font-size: .95rem; }
+
+    /* WhatsApp flutuante + Janela de conversa */
+    .whatsapp-float { position: fixed; bottom: 20px; right: 20px; z-index: 999; cursor: pointer; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%{transform:scale(1)} 50%{transform:scale(1.1)} 100%{transform:scale(1)} }
+
+    .whatsapp-chat {
+      position: fixed; bottom: 90px; right: 20px; width: 320px; max-width: calc(100% - 40px);
+      border: 1px solid #e9ecef; border-radius: 14px; box-shadow: 0 8px 28px rgba(0,0,0,.2);
+      background: #fff; z-index: 1000;
+    }
+
+    /* Acessibilidade melhorada */
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+
+    /* Dark mode automático */
+    @media (prefers-color-scheme: dark) {
+      body { background:#0f1113; color:#e8e8e8; }
+      .navbar, footer { background:#0b0c0d !important; }
+      .form-container, .info-box, .whatsapp-chat { background:#16181a; border-color:#242729; }
+      .text-dark { color:#e8e8e8 !important; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+      <i class="fas fa-cogs me-2"></i> HelpTech Antunes
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-contato">
+    <div class="container">
+      <h1><i class="fas fa-envelope me-2"></i> Fale Conosco</h1>
+      <p class="lead mt-3">Tire suas dúvidas, solicite orçamento ou suporte técnico com nossa equipe.</p>
+    </div>
+  </section>
+
+  <!-- Conteúdo Principal -->
+  <main class="container py-5">
+    <div class="row g-4 align-items-start">
+      <!-- Informações -->
+      <div class="col-lg-5">
+        <div class="info-box h-100">
+          <h4 class="text-success mb-3"><i class="fas fa-phone-alt me-2"></i> Contato Rápido</h4>
+          <p class="mb-2"><i class="fas fa-map-marker-alt me-2 text-danger"></i> Avenida Luís Pereira dos Santos, 556 - Jundiaí/SP</p>
+          <p class="mb-2"><i class="fab fa-whatsapp me-2 text-success"></i>
+            <a href="https://wa.me/5511957805217?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="text-decoration-none fw-semibold">+55 11 95780-5217</a>
+          </p>
+          <p class="mb-2"><i class="far fa-envelope me-2 text-primary"></i>
+            <a href="mailto:antuneshelptech6@gmail.com" class="text-decoration-none fw-semibold">antuneshelptech6@gmail.com</a>
+          </p>
+          <p class="mb-4"><i class="fab fa-instagram me-2 text-danger"></i>
+            <a href="https://instagram.com/helptech_antunes" target="_blank" rel="noopener" class="text-decoration-none fw-semibold">@helptech_antunes</a>
+          </p>
+          <div class="d-grid gap-2 mb-4">
+            <a class="btn btn-success" href="tel:+5511957805217"><i class="fa-solid fa-phone-volume me-2"></i>Ligar agora</a>
+            <a class="btn btn-outline-success" target="_blank" rel="noopener" href="https://wa.me/5511957805217?text=Ol%C3%A1!%20Quero%20um%20atendimento%20r%C3%A1pido."><i class="fa-brands fa-whatsapp me-2"></i>WhatsApp</a>
+          </div>
+          <hr class="my-4">
+          <h5 class="text-success mb-3"><i class="fas fa-map me-2"></i> Como Chegar</h5>
+          <div class="ratio ratio-16x9 rounded-3 shadow-sm overflow-hidden">
+            <!-- Lazy load do mapa: troca data-src por src quando visível -->
+            <iframe id="mapa" title="Mapa com a localização da HelpTech Antunes" data-src="https://www.google.com/maps?q=Avenida+Lu%C3%ADs+Pereira+dos+Santos,+556,+Jundia%C3%AD+-+SP&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0;"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulário -->
+      <div class="col-lg-7">
+        <div class="form-container">
+          <h4 class="text-success mb-4 d-flex align-items-center"><i class="fas fa-file-signature me-2"></i> Solicite um Orçamento</h4>
+
+          <div id="form-alert" class="alert d-none" role="alert" aria-live="assertive"></div>
+
+          <form id="contato-form" action="https://formspree.io/f/xzbllkvd" method="POST" novalidate>
+            <!-- Honeypot contra spam (Formspree) -->
+            <input type="text" name="_gotcha" class="sr-only" tabindex="-1" autocomplete="off">
+
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="form-label" for="nome"><i class="fas fa-user"></i> Nome</label>
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome" minlength="2" required />
+                <div class="invalid-feedback">Informe seu nome.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label" for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="seu@email.com" inputmode="email" required />
+                <div class="invalid-feedback">Informe um e-mail válido.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label" for="telefone"><i class="fas fa-phone"></i> Telefone</label>
+                <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(11) 99999-9999" inputmode="tel" pattern="^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$" />
+                <div class="form-text">Formato sugerido: (11) 99999-9999</div>
+                <div class="invalid-feedback">Use um telefone válido, ex: (11) 99999-9999</div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label" for="tipo"><i class="fa-solid fa-list-check"></i> Tipo de serviço</label>
+                <select id="tipo" name="tipo" class="form-select" required>
+                  <option value="" selected disabled>Selecione…</option>
+                  <option>Formatação/Windows</option>
+                  <option>Manutenção/Hardware</option>
+                  <option>Instalação de programas</option>
+                  <option>Redes/Internet</option>
+                  <option>Outros</option>
+                </select>
+                <div class="invalid-feedback">Selecione um tipo de serviço.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label" for="preferencia"><i class="fa-regular fa-clock"></i> Preferência de contato</label>
+                <select id="preferencia" name="preferencia" class="form-select">
+                  <option>WhatsApp</option>
+                  <option>Ligação</option>
+                  <option>E-mail</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="mensagem"><i class="fas fa-comment-dots"></i> Mensagem</label>
+                <textarea id="mensagem" name="mensagem" class="form-control" rows="5" placeholder="Descreva o serviço desejado" minlength="8" required></textarea>
+                <div class="invalid-feedback">Descreva rapidamente o que você precisa.</div>
+              </div>
+
+              <!-- Campos ocultos úteis do Formspree -->
+              <input type="hidden" name="_subject" value="[Contato Site] Novo pedido de orçamento" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="origem" value="Página de Contato" />
+            </div>
+
+            <button id="btn-submit" type="submit" class="btn btn-success w-100 py-2 mt-3">
+              <span class="btn-label"><i class="fas fa-paper-plane me-2"></i> Enviar Mensagem</span>
+              <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+      <div class="container pb-5">
+        <div class="info-box mt-4">
+          <h4 class="text-success mb-4 d-flex align-items-center"><i class="fas fa-credit-card me-2"></i> Opções de Pagamento</h4>
+          <p class="mb-4">Aceitamos diversas formas de pagamento para sua conveniência. Escolha a que melhor se adapta às suas necessidades.</p>
+   <!-- Formas de Pagamento -->
+          <h5 class="text-success mb-3"><i class="fas fa-credit-card me-2"></i> Formas de Pagamento</h5>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="card text-center border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <i class="fas fa-credit-card fa-2x text-primary mb-3"></i>
+                  <h6 class="fw-bold">Crédito</h6>
+                  <p class="small text-muted mb-0">Obs: cliente paga a taxa da maquininha</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-center border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <i class="fas fa-credit-card fa-2x text-info mb-3"></i>
+                  <h6 class="fw-bold">Débito</h6>
+                  <p class="small text-muted mb-0">Pagamento rápido e seguro</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-center border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <i class="fas fa-qrcode fa-2x text-success mb-3"></i>
+                  <h6 class="fw-bold">Pix</h6>
+                  <p class="small text-muted mb-0">Chave Pix disponível "400.187.518-73" no atendimento</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <!-- Rodapé -->
+  <footer class="bg-dark text-light text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 <strong>HelpTech Antunes</strong> | Todos os direitos reservados</p>
+      <p class="mb-0">Atendimento: <strong>Segunda a Sexta, das 9h às 18h</strong></p>
+      <p class="mb-0">
+        <i class="far fa-envelope me-2 text-white"></i>
+        <a href="mailto:antuneshelptech6@gmail.com" class="text-decoration-none text-light">antuneshelptech6@gmail.com</a> |
+        <i class="fab fa-instagram ms-2 me-2 text-white"></i>
+        <a href="https://instagram.com/helptech_antunes" target="_blank" rel="noopener" class="text-decoration-none text-light">@helptech_antunes</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <button id="whatsapp-button" class="whatsapp-float border-0 bg-transparent" aria-label="Abrir chat do WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="60" height="60" loading="lazy" />
+  </button>
+
+  <!-- Janela de chat WhatsApp -->
+  <div id="whatsapp-chat" class="whatsapp-chat d-none" aria-hidden="true" aria-labelledby="chat-title" role="dialog">
+    <div class="chat-header bg-success text-white p-3 d-flex justify-content-between align-items-center">
+      <div>
+        <strong id="chat-title">Central de Atendimento</strong><br>
+        <small>Online</small>
+      </div>
+      <button class="btn-close btn-close-white" id="close-chat" aria-label="Fechar chat"></button>
+    </div>
+    <div class="chat-body p-3">
+      <p>Olá! Quer atendimento rápido via WhatsApp?<br>Preencha seu nome e telefone:</p>
+      <label for="wpp-nome" class="form-label">Nome</label>
+      <input type="text" id="wpp-nome" class="form-control mb-2" placeholder="Seu nome">
+      <label for="wpp-telefone" class="form-label">Telefone</label>
+      <input type="tel" id="wpp-telefone" class="form-control mb-3" placeholder="(11) 99999-9999" inputmode="tel">
+      <button class="btn btn-success w-100" id="iniciar-conversa">
+        <i class="fab fa-whatsapp me-2"></i>Iniciar conversa
+      </button>
+    </div>
+  </div>
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "HelpTech Antunes",
+    "image": "logo-helptech.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenida Luís Pereira dos Santos, 556",
+      "addressLocality": "Jundiaí",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "telephone": "+55 11 95780-5217",
+    "sameAs": ["https://instagram.com/helptech_antunes"],
+    "openingHours": "Mo-Fr 09:00-18:00"
+  }
+  </script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script>
+    // Lazy load do mapa quando entra na viewport
+    const mapa = document.getElementById('mapa');
+    const mapaSrc = mapa?.getAttribute('data-src');
+    if ('IntersectionObserver' in window && mapa && mapaSrc) {
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            mapa.setAttribute('src', mapaSrc);
+            obs.disconnect();
+          }
+        });
+      });
+      io.observe(mapa);
+    } else if (mapa && mapaSrc) {
+      mapa.setAttribute('src', mapaSrc);
+    }
+
+    // WhatsApp mini-chat
+    const btn = document.getElementById('whatsapp-button');
+    const chat = document.getElementById('whatsapp-chat');
+    const fechar = document.getElementById('close-chat');
+    const iniciar = document.getElementById('iniciar-conversa');
+
+    btn?.addEventListener('click', () => {
+      const hidden = chat.classList.toggle('d-none');
+      chat.setAttribute('aria-hidden', hidden ? 'true' : 'false');
+    });
+    fechar?.addEventListener('click', () => {
+      chat.classList.add('d-none');
+      chat.setAttribute('aria-hidden', 'true');
+    });
+    iniciar?.addEventListener('click', () => {
+      const nome = (document.getElementById('wpp-nome') || {}).value || '';
+      const tel = (document.getElementById('wpp-telefone') || {}).value || '';
+      const texto = `Olá! Me chamo ${nome} e meu telefone é ${tel}. Gostaria de atendimento.`;
+      const url = `https://wa.me/5511957805217?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
+    });
+
+    // Máscara simples para telefone (não depende de libs)
+    function maskTel(value) {
+      return value
+        .replace(/\\D/g, '')
+        .replace(/(\\d{2})(\\d)/, '($1) $2')
+        .replace(/(\\d{5})(\\d{4})$/, '$1-$2');
+    }
+    const telInput = document.getElementById('telefone');
+    telInput?.addEventListener('input', (e) => {
+      e.target.value = maskTel(e.target.value);
+    });
+    const wppTel = document.getElementById('wpp-telefone');
+    wppTel?.addEventListener('input', (e) => {
+      e.target.value = maskTel(e.target.value);
+    });
+
+    // Validação do formulário + feedback + loading
+    const form = document.getElementById('contato-form');
+    const alertBox = document.getElementById('form-alert');
+    const submitBtn = document.getElementById('btn-submit');
+    const spinner = submitBtn?.querySelector('.spinner-border');
+    const btnLabel = submitBtn?.querySelector('.btn-label');
+
+    form?.addEventListener('submit', function(e) {
+      // Validação nativa Bootstrap
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        e.stopPropagation();
+        form.classList.add('was-validated');
+        alertBox.className = 'alert alert-danger';
+        alertBox.textContent = 'Por favor, corrija os campos destacados e tente novamente.';
+        alertBox.classList.remove('d-none');
+        return;
+      }
+
+      // Ativa loading e evita duplo envio
+      submitBtn?.setAttribute('disabled', 'true');
+      spinner?.classList.remove('d-none');
+      btnLabel?.classList.add('d-none');
+
+      // Deixa o alerta invisível até o redirecionamento do Formspree
+      alertBox.classList.add('d-none');
+    });
+  </script>
+</body>
+</html>

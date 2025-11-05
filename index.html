@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miranda Tech - Face ID</title>
+  <link rel="icon" href="assets/faces/alison.jpg">
+  <style>
+    body { background-color: #0a0a0a; color: #fff; font-family: 'Poppins', sans-serif; text-align:center; }
+    h1 { color: #00d9ff; margin-top: 40px; }
+    #faceid-btn { position: fixed; bottom: 20px; right: 20px; background: #00d9ff; color: #000;
+      width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; font-size: 28px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: all 0.2s; z-index: 9999; }
+    #faceid-btn:hover { transform: scale(1.05); box-shadow: 0 6px 16px rgba(0,0,0,0.6); }
+    #video-faceid { position: fixed; bottom: 90px; right: 20px; border-radius: 12px; display: none;
+      box-shadow: 0 0 20px rgba(0,217,255,0.4); z-index: 9998; }
+    .neon-alert { position: fixed; bottom: 160px; right: 50%; transform: translateX(50%);
+      background: rgba(0,217,255,0.1); border: 2px solid #00d9ff; color: #00d9ff; padding: 14px 22px;
+      border-radius: 12px; box-shadow: 0 0 20px rgba(0,217,255,0.6); display: none; animation: fadeInOut 3s ease; }
+    @keyframes fadeInOut { 0% { opacity: 0; transform: translateX(50%) scale(0.8); }
+      20% { opacity: 1; transform: translateX(50%) scale(1); } 80% { opacity: 1; }
+      100% { opacity: 0; transform: translateX(50%) scale(0.8); } }
+  </style>
+</head>
+<body>
+  <h1>👤 Face ID - Miranda Tech</h1>
+  <p>Clique no botão abaixo para testar o reconhecimento facial.</p>
+  <div id="faceid-btn">👤</div>
+  <div id="alert" class="neon-alert"></div>
+  <video id="video-faceid" width="260" height="200" autoplay muted></video>
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+  <script src="assets/js/faceid.js"></script>
+</body>
+</html>
